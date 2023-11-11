@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.913" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-11-10T05:55:52" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-10T05:55:52" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-10T05:55:52" tests="2" time="0.711" failures="0">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.545" classname="Positif Case: Login with valid credential">
+    </testcase>
+    <testcase name="API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential" time="0.107" classname="Negatif Case: Login with invalid credential">
+    </testcase>
+  </testsuite>
+  <testsuite name="Me Endpoint" timestamp="2023-11-10T05:55:53" tests="1" time="0.186" failures="0">
+    <testcase name="API Testing ATMATECH Me Endpoint Positif Case: Get User Detail with valid access token" time="0.133" classname="Positif Case: Get User Detail with valid access token">
+    </testcase>
+  </testsuite>
+</testsuites>

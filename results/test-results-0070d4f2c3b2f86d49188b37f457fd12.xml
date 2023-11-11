@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.564" tests="11" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-11-11T06:06:35" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-11T06:06:35" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-11T06:06:35" tests="2" time="0.754" failures="0">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.504" classname="Positif Case: Login with valid credential">
+    </testcase>
+    <testcase name="API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential" time="0.151" classname="Negatif Case: Login with invalid credential">
+    </testcase>
+  </testsuite>
+  <testsuite name="User Detail Login" timestamp="2023-11-11T06:06:36" tests="4" time="0.838" failures="0">
+    <testcase name="API Testing ATMATECH User Detail Login Positif Case: Get User Detail with valid access token" time="0.143" classname="Positif Case: Get User Detail with valid access token">
+    </testcase>
+    <testcase name="API Testing ATMATECH User Detail Login Negative Case: Access API User detail without token" time="0.179" classname="Negative Case: Access API User detail without token">
+    </testcase>
+    <testcase name="API Testing ATMATECH User Detail Login Negatif Case: Unauthorized access to Detail" time="0.135" classname="Negatif Case: Unauthorized access to Detail">
+    </testcase>
+    <testcase name="API Testing ATMATECH User Detail Login Negative Case: Access Invalid Endpoint" time="0.121" classname="Negative Case: Access Invalid Endpoint">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users Endpoint" timestamp="2023-11-11T06:06:37" tests="5" time="0.950" failures="0">
+    <testcase name="API Testing ATMATECH Users Endpoint Positive Case: Get data User based on criteria" time="0.134" classname="Positive Case: Get data User based on criteria">
+    </testcase>
+    <testcase name="API Testing ATMATECH Users Endpoint Negative Case: Access API user list without token" time="0.140" classname="Negative Case: Access API user list without token">
+    </testcase>
+    <testcase name="API Testing ATMATECH Users Endpoint Negative Case: Access API user list with invalid token" time="0.142" classname="Negative Case: Access API user list with invalid token">
+    </testcase>
+    <testcase name="API Testing ATMATECH Users Endpoint Negative Case: Use invalid parameter" time="0.128" classname="Negative Case: Use invalid parameter">
+    </testcase>
+    <testcase name="API Testing ATMATECH Users Endpoint Negative Case: Access Invalid Endpoint" time="0.118" classname="Negative Case: Access Invalid Endpoint">
+    </testcase>
+  </testsuite>
+</testsuites>

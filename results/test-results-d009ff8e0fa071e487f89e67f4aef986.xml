@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.161" tests="5" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-11-11T02:51:16" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-11T02:51:16" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-11T02:51:16" tests="2" time="0.831" failures="0">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.469" classname="Positif Case: Login with valid credential">
+    </testcase>
+    <testcase name="API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential" time="0.224" classname="Negatif Case: Login with invalid credential">
+    </testcase>
+  </testsuite>
+  <testsuite name="User Detail Login" timestamp="2023-11-11T02:51:16" tests="2" time="0.370" failures="0">
+    <testcase name="API Testing ATMATECH User Detail Login User Detail | Positif Case: Get User Detail with valid access token" time="0.141" classname="User Detail | Positif Case: Get User Detail with valid access token">
+    </testcase>
+    <testcase name="API Testing ATMATECH User Detail Login User Detail Login | Negatif Case: Unauthorized access to Detail" time="0.116" classname="User Detail Login | Negatif Case: Unauthorized access to Detail">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users Endpoint" timestamp="2023-11-11T02:51:17" tests="1" time="0.942" failures="1">
+    <testcase name="API Testing ATMATECH Users Endpoint Positif Case: Get data User based on criteria" time="0.000" classname="Positif Case: Get data User based on criteria">
+      <failure message="`cy.request()` failed on:
+
+https://qc-test.atmatech.id/user/?q=&amp;role=user&amp;page=1&amp;limit=10
+
+The response we received from your web server was:
+
+  &gt; 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://qc-test.atmatech.id/user/?q=&amp;role=user&amp;page=1&amp;limit=10
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;Authorization&quot;: &quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk2NzI4NzgsImlkIjoiNjRlYzY3Nzc2NmFlMGZhMDBkZDY4NjkzIiwicm9sZSI6InN1cGVyYWRtaW4ifQ.RdU8hxme3NYWekJ1dGC_didY_D0E1aVQXDkF3zC7B1A&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.5.0 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  &quot;date&quot;: &quot;Sat, 11 Nov 2023 02:51:19 GMT&quot;,
+  &quot;content-type&quot;: &quot;application/json; charset=UTF-8&quot;,
+  &quot;content-length&quot;: &quot;24&quot;,
+  &quot;connection&quot;: &quot;keep-alive&quot;,
+  &quot;vary&quot;: &quot;Origin&quot;,
+  &quot;cf-cache-status&quot;: &quot;DYNAMIC&quot;,
+  &quot;report-to&quot;: &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xXnjPp96nsN8X9nQ%2BJ1lj75iHOiuSt4z6ygrGksRmeS6pJqxo1urvwFItxJ%2B6t33ngJi8ZX4MvWgMbnTvYK1XU9Og5KsjgTUfLkfcWHCWylTWc8dDpdwUjtnXx2wq4m7qVr45VRI\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;,
+  &quot;nel&quot;: &quot;{\&quot;success_fraction\&quot;:0,\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;,
+  &quot;server&quot;: &quot;cloudflare&quot;,
+  &quot;cf-ray&quot;: &quot;82433b96b8274ac3-CGK&quot;,
+  &quot;alt-svc&quot;: &quot;h3=\&quot;:443\&quot;; ma=86400&quot;
+}
+Body: {
+  &quot;message&quot;: &quot;Not Found&quot;
+}
+
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://qc-test.atmatech.id/user/?q=&role=user&page=1&limit=10
+
+The response we received from your web server was:
+
+  > 404: Not Found
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://qc-test.atmatech.id/user/?q=&role=user&page=1&limit=10
+Headers: {
+  "Connection": "keep-alive",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTk2NzI4NzgsImlkIjoiNjRlYzY3Nzc2NmFlMGZhMDBkZDY4NjkzIiwicm9sZSI6InN1cGVyYWRtaW4ifQ.RdU8hxme3NYWekJ1dGC_didY_D0E1aVQXDkF3zC7B1A",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.5.0 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate"
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 404 - Not Found
+Headers: {
+  "date": "Sat, 11 Nov 2023 02:51:19 GMT",
+  "content-type": "application/json; charset=UTF-8",
+  "content-length": "24",
+  "connection": "keep-alive",
+  "vary": "Origin",
+  "cf-cache-status": "DYNAMIC",
+  "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xXnjPp96nsN8X9nQ%2BJ1lj75iHOiuSt4z6ygrGksRmeS6pJqxo1urvwFItxJ%2B6t33ngJi8ZX4MvWgMbnTvYK1XU9Og5KsjgTUfLkfcWHCWylTWc8dDpdwUjtnXx2wq4m7qVr45VRI\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+  "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+  "server": "cloudflare",
+  "cf-ray": "82433b96b8274ac3-CGK",
+  "alt-svc": "h3=\":443\"; ma=86400"
+}
+Body: {
+  "message": "Not Found"
+}
+
+
+https://on.cypress.io/request
+    at <unknown> (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:133362:72)
+    at tryCatcher (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:1701:18)
+    at _drainQueueStep (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:2407:12)
+    at _drainQueue (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:2400:9)
+    at Async._drainQueues (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:2416:5)
+    at Async.drainQueues (https://qc-test.atmatech.id/__cypress/runner/cypress_runner.js:2286:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/api_test.cy.js:125:15)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

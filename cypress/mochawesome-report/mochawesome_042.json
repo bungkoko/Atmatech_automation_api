@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-10T10:33:06.688Z",
+    "end": "2023-11-10T10:33:08.156Z",
+    "duration": 1468,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c12702c8-f4f7-41aa-b6e0-63f66aa2f77e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api_test.cy.js",
+      "file": "cypress\\e2e\\api_test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33dabff7-dd43-4240-aa12-02f27472e283",
+          "title": "API Testing ATMATECH",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c507816c-69e9-49fc-9457-67d84b06a3b1",
+              "title": "Login Endpoint",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Positif Case: Login with valid credential",
+                  "fullTitle": "API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential",
+                  "timedOut": null,
+                  "duration": 573,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: 'POST',\n  url: 'https://qc-test.atmatech.id/api/login',\n  body: {\n    username: validUsername,\n    password: validPassword\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('accessToken');\n  token = response.body.accessToken;\n});",
+                  "err": {},
+                  "uuid": "a781ef92-9140-4ba2-9d50-9b94cf6bb640",
+                  "parentUUID": "c507816c-69e9-49fc-9457-67d84b06a3b1",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Negatif Case: Login with invalid credential",
+                  "fullTitle": "API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential",
+                  "timedOut": null,
+                  "duration": 144,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: 'POST',\n  url: 'https://qc-test.atmatech.id/api/login',\n  body: {\n    username: invalidUsername,\n    password: invalidPassword\n  },\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(400);\n  expect(response.body).to.have.property('message', 'Nama pengguna atau kata sandi salah.');\n});",
+                  "err": {},
+                  "uuid": "f2d01912-624f-44d4-b000-9600ad903d30",
+                  "parentUUID": "c507816c-69e9-49fc-9457-67d84b06a3b1",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a781ef92-9140-4ba2-9d50-9b94cf6bb640",
+                "f2d01912-624f-44d4-b000-9600ad903d30"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 717,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "e06a2ead-7653-487a-a559-de2217174b16",
+              "title": "Me Endpoint",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Detail Profile | Positif Case: Get User Detail with valid access token",
+                  "fullTitle": "API Testing ATMATECH Me Endpoint Detail Profile | Positif Case: Get User Detail with valid access token",
+                  "timedOut": null,
+                  "duration": 145,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://qc-test.atmatech.id/api/me/',\n  headers: {\n    Authorization: `Bearer ${token}`\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('_id');\n  expect(response.body).to.have.property('username');\n});",
+                  "err": {},
+                  "uuid": "185a8cc5-ef29-4ff0-b0e5-e6dad4bb4beb",
+                  "parentUUID": "e06a2ead-7653-487a-a559-de2217174b16",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Detail Profile | Negatif Case: Unauthorized access to Detail",
+                  "fullTitle": "API Testing ATMATECH Me Endpoint Detail Profile | Negatif Case: Unauthorized access to Detail",
+                  "timedOut": null,
+                  "duration": 141,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.request({\n  method: 'GET',\n  url: 'https://qc-test.atmatech.id/api/me/',\n  headers: {\n    Authorization: 'Bearer invalidToken'\n  },\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(401);\n  expect(response.body).to.have.property('message', 'Unauthorized');\n});",
+                  "err": {},
+                  "uuid": "32c12974-6b18-474c-b699-e9ec29a4d009",
+                  "parentUUID": "e06a2ead-7653-487a-a559-de2217174b16",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Edit Profil | Edit User Profile Successfully",
+                  "fullTitle": "API Testing ATMATECH Me Endpoint Edit Profil | Edit User Profile Successfully",
+                  "timedOut": null,
+                  "duration": 151,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "let res;\nconst newProfileData = new FormData();\nnewProfileData.append('email', \"superadmin1@mailinator.com\");\nnewProfileData.append('fullName', 'Super Admin');\ncy.request({\n  method: 'PUT',\n  url: 'https://qc-test.atmatech.id/api/me/',\n  headers: {\n    Authorization: `Bearer ${token}`,\n    'Content-Type': 'multipart/form-data'\n  },\n  body: newProfileData,\n  failOnStatusCode: false\n}).then(response => {\n  cy.log('Respon API:', response.body);\n});\n//console.log(res);",
+                  "err": {},
+                  "uuid": "00c781fa-6b8b-400c-89d0-ae7ff008b66c",
+                  "parentUUID": "e06a2ead-7653-487a-a559-de2217174b16",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "185a8cc5-ef29-4ff0-b0e5-e6dad4bb4beb",
+                "32c12974-6b18-474c-b699-e9ec29a4d009",
+                "00c781fa-6b8b-400c-89d0-ae7ff008b66c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 437,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

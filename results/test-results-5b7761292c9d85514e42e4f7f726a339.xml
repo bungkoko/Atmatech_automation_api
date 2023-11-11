@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.431" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-11-11T03:25:20" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-11T03:25:20" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-11T03:25:20" tests="2" time="1.597" failures="0">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.609" classname="Positif Case: Login with valid credential">
+    </testcase>
+    <testcase name="API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential" time="0.816" classname="Negatif Case: Login with invalid credential">
+    </testcase>
+  </testsuite>
+  <testsuite name="User Detail Login" timestamp="2023-11-11T03:25:22" tests="2" time="0.523" failures="0">
+    <testcase name="API Testing ATMATECH User Detail Login User Detail | Positif Case: Get User Detail with valid access token" time="0.169" classname="User Detail | Positif Case: Get User Detail with valid access token">
+    </testcase>
+    <testcase name="API Testing ATMATECH User Detail Login User Detail Login | Negatif Case: Unauthorized access to Detail" time="0.164" classname="User Detail Login | Negatif Case: Unauthorized access to Detail">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users Endpoint" timestamp="2023-11-11T03:25:22" tests="1" time="0.285" failures="0">
+    <testcase name="API Testing ATMATECH Users Endpoint Positif Case: Get data User based on criteria" time="0.179" classname="Positif Case: Get data User based on criteria">
+    </testcase>
+  </testsuite>
+</testsuites>

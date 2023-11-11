@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.391" tests="6" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-11-10T14:58:32" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-10T14:58:32" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-10T14:58:32" tests="2" time="0.945" failures="0">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.673" classname="Positif Case: Login with valid credential">
+    </testcase>
+    <testcase name="API Testing ATMATECH Login Endpoint Negatif Case: Login with invalid credential" time="0.154" classname="Negatif Case: Login with invalid credential">
+    </testcase>
+  </testsuite>
+  <testsuite name="Me Endpoint" timestamp="2023-11-10T14:58:33" tests="4" time="1.425" failures="1">
+    <testcase name="API Testing ATMATECH Me Endpoint Detail Profile | Positif Case: Get User Detail with valid access token" time="0.229" classname="Detail Profile | Positif Case: Get User Detail with valid access token">
+    </testcase>
+    <testcase name="API Testing ATMATECH Me Endpoint Detail Profile | Negatif Case: Unauthorized access to Detail" time="0.128" classname="Detail Profile | Negatif Case: Unauthorized access to Detail">
+    </testcase>
+    <testcase name="API Testing ATMATECH Me Endpoint Edit Profil | Edit User Profile Successfully" time="0.125" classname="Edit Profil | Edit User Profile Successfully">
+    </testcase>
+    <testcase name="API Testing ATMATECH Me Endpoint Edit Profile | Negative Case: Unauthorized access token" time="0.000" classname="Edit Profile | Negative Case: Unauthorized access token">
+      <failure message="expected {} to have property &apos;error&apos;" type="AssertionError"><![CDATA[AssertionError: expected {} to have property 'error'
+    at Context.eval (webpack:///./cypress/e2e/api_test.cy.js:109:46)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

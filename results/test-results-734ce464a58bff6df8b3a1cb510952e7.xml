@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.343" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-11-10T03:52:56" tests="0" file="cypress\e2e\api_test.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Testing ATMATECH" timestamp="2023-11-10T03:52:56" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Endpoint" timestamp="2023-11-10T03:52:56" tests="1" time="1.307" failures="1">
+    <testcase name="API Testing ATMATECH Login Endpoint Positif Case: Login with valid credential" time="0.000" classname="Positif Case: Login with valid credential">
+      <failure message="baseURL is not defined" type="ReferenceError"><![CDATA[ReferenceError: baseURL is not defined
+    at Context.eval (webpack:///./cypress/e2e/api_test.cy.js:13:23)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
